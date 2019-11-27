@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>BUS SYSTEM</h1>
-	<h2>BUS SYS</h2>
+
 	<%-- <%Member m = new Member("kk",89,"dsd","dks","djsd"); 
 	String str = "dd";
 	%> --%>
@@ -23,14 +23,18 @@
 	</form>
 	
 	
-	<form id="creatememberform"  action="createaccount.jsp" >
-		이름 : <input type = "text" name = "NAME" maxlength= "12"><br/>
-		이메일 : <input type = "email" name = "EMAIL"><br/>
-		전화번호 : <input type = "tel" name = "PHONENUM" maxlength= "12"><br/>
-		아이디 : <input type = "text" name = "ID" maxlength= "12"><br/>
-		패스워드 : <input type = "password" name = "PWD" maxlength= "12"><br/>
-		<input type = "submit" value = "회원가입" ><br/> 
-	</form>
+	<div id = "loginpage-modal-content">
+		<form id="creatememberform"  action="createaccount.jsp" >
+			이름 : <input type = "text" name = "NAME" maxlength= "12" required><br/>
+			이메일 : <input type = "email" name = "EMAIL" required><br/>
+			전화번호 : <input type = "tel" name = "PHONENUM" maxlength= "12" required><br/>
+			아이디 : <input type = "text" name = "ID" maxlength= "12" required><br/>
+			패스워드 : <input type = "password" name = "PWD" maxlength= "12" required><br/>
+			<input type = "submit" value = "회원가입" >
+			<input type = "button" value = "닫기"><br/> 
+		</form>
+	
+	</div>
 	
 	<!-- onclick에 java function 어떻게 연결하는지 -->
 	<%-- <%= str %> --%>
@@ -39,7 +43,7 @@
 	
 	<Script>
 	function button1_click(){
-		document.getElementById('creatememberform').style.display="block";
+		document.getElementById('loginpage-modal-content').style.display="block";
 	}
 	
 	</Script>

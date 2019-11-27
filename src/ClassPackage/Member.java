@@ -1,11 +1,15 @@
 package ClassPackage;
 
+import java.util.ArrayList;
+
 public class Member {
 	private String NAME;
 	private int PHONENUM;
 	private String EMAIL;
 	private String ID;
 	private String PWD;
+	private ArrayList<Reservation> RESERVATIONS;
+
 	
 	public Member() {
 
